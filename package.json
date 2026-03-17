@@ -1,0 +1,17 @@
+{
+  "name": "paving-company-web",
+  "version": "1.0.0",
+  "description": "Ontario Paving Corp – Business website with Resend contact form",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.1.5",
+    "multer": "^2.1.0",
+    "resend": "^3.2.0"
+  }
+}

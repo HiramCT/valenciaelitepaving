@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Valencia's Elite Paving — Heavy-duty asphalt paving & repair for residential, commercial and municipal clients across the GTA and Ontario.">
+    <title>Valencia's Elite Paving </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ═══════════════════════════════════════════════════════ HEADER / NAV -->
+    <header class="main-header" id="main-header">
+        <div class="container header-inner">
+            <a href="javascript:void(0)" class="logo" onclick="showTab('home')">
+                <img src="images/logo.png" alt="Valencia's Elite Paving" class="logo-img">
+                <span class="logo-text">Valencia's<br>Elite Paving</span>
+            </a>
+            <button class="hamburger" id="hamburger" aria-label="Open navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="javascript:void(0)" class="nav-link active" data-tab="home">Home</a></li>
+                    <li><a href="javascript:void(0)" class="nav-link" data-tab="services">Services</a></li>
+                    <li><a href="javascript:void(0)" class="nav-link" data-tab="projects">Projects</a></li>
+                    <li><a href="javascript:void(0)" class="nav-link" data-tab="about">About Us</a></li>
+                    <li><a href="javascript:void(0)" class="nav-link" data-tab="residential">Residential</a></li>
+                    <li><a href="javascript:void(0)" class="nav-link" data-tab="commercial">Commercial</a></li>
+                    <li><a href="javascript:void(0)" class="nav-link" data-tab="coverage">Coverage</a></li>
+                    <li><a href="javascript:void(0)" class="nav-link" data-tab="faq">FAQ</a></li>
+                    <li><a href="javascript:void(0)" class="nav-link btn-nav" data-tab="contact">Get a Quote</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════════════════════ HOME -->
+    <section id="tab-home" class="tab-section active">
+
+        <div class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <p class="hero-eyebrow fade-in-up">Serving Ontario Since 2021</p>
+                <h1 class="fade-in-up delay-1">Built Tough.<br>Done Right.<br>On Schedule.</h1>
+                <p class="hero-sub fade-in-up delay-2">Heavy-duty asphalt paving, sealcoating and repair for
+                    residential, commercial and municipal clients across the Greater Toronto Area.</p>
+                <div class="hero-actions fade-in-up delay-3">
+                    <a href="javascript:void(0)" class="btn btn-yellow" onclick="showTab('contact')">Request a Quote</a>
+                    <a href="javascript:void(0)" class="btn btn-outline" onclick="showTab('services')">Our Services</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trust Bar -->
+        <div class="trust-bar">
+            <div class="container trust-bar-inner">
+                <div class="trust-item"><strong>5+</strong> Years Experience</div>
+                <div class="trust-sep">|</div>
+                <div class="trust-item"><strong>Quality</strong> Workmanship</div>
+                <div class="trust-sep">|</div>
+                <div class="trust-item"><strong>GTA &amp; Ontario</strong> Coverage</div>
+                <div class="trust-sep">|</div>
+                <div class="trust-item"><strong>Free</strong> Estimates</div>
+            </div>
+        </div>
+
+        <!-- Home Services Preview -->
+        <div class="section-padding">
+            <div class="container">
+                <div class="section-label">What We Do</div>
+                <h2 class="section-title">Industrial‑Grade Solutions for Every Scale</h2>
+                <div class="home-services-grid">
+                    <div class="hs-card reveal">
+                        <div class="hs-icon">⬛</div>
+                        <h3>Asphalt Paving</h3>
+                        <p>New installations and overlays for roads, lots, driveways and pathways.</p>
+                        <a href="javascript:void(0)" class="text-link"
+                            onclick="showTab('services', {scrollTo:'#svc-paving'})">Learn more
+                            →</a>
+                    </div>
+                    <div class="hs-card reveal">
+                        <div class="hs-icon">🔧</div>
+                        <h3>Repair &amp; Patching</h3>
+                        <p>Pothole filling, crack sealing and surface restoration using premium binder.</p>
+                        <a href="javascript:void(0)" class="text-link"
+                            onclick="showTab('services', {scrollTo:'#svc-repair'})">Learn more
+                            →</a>
+                    </div>
+                    <div class="hs-card reveal">
+                        <div class="hs-icon">🖌</div>
+                        <h3>Sealcoating</h3>
+                        <p>Coal-tar emulsion sealcoating extending pavement life by up to 50%.</p>
+                        <a href="javascript:void(0)" class="text-link"
+                            onclick="showTab('services', {scrollTo:'#svc-sealcoating'})">Learn
+                            more →</a>
+                    </div>
+                    <div class="hs-card reveal">
+                        <div class="hs-icon">📐</div>
+                        <h3>Line Striping</h3>
+                        <p>Compliant road markings and parking lot layouts to MTO specifications.</p>
+                        <a href="javascript:void(0)" class="text-link"
+                            onclick="showTab('services', {scrollTo:'#svc-striping'})">Learn
+                            more →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Band -->
+        <div class="cta-band">
+            <div class="container cta-band-inner">
+                <div>
+                    <h3>Ready to start your project?</h3>
+                    <p>Free on-site estimates across the GTA. No obligation.</p>
+                </div>
+                <a href="javascript:void(0)" class="btn btn-yellow" onclick="showTab('contact')">Request Free
+                    Estimate</a>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ SERVICES -->
+    <section id="tab-services" class="tab-section">
+        <div class="page-banner">
+            <div class="container">
+                <h1>Our Services</h1>
+                <p>Comprehensive asphalt and paving solutions delivered to MTO standards.</p>
+            </div>
+        </div>
+        <div class="section-padding">
+            <div class="container">
+                <div class="services-grid">
+
+                    <div class="svc-card reveal" id="svc-paving">
+                        <div class="svc-accent"></div>
+                        <div class="svc-num">01</div>
+                        <h3>Asphalt Paving</h3>
+                        <p>Full-depth asphalt installations for new construction on roads, commercial lots, industrial
+                            yards, residential driveways and pathways. Hot-mix materials, properly compacted to spec.
+                        </p>
+                        <ul class="svc-list">
+                            <li>New road construction</li>
+                            <li>Parking lot installation</li>
+                            <li>Residential driveways</li>
+                            <li>Pathway &amp; trail paving</li>
+                        </ul>
+                        <a href="javascript:void(0)" class="text-link svc-quote-link"
+                            onclick="showTab('contact', {service:'Asphalt Paving'})">Request a Quote →</a>
+                    </div>
+
+                    <div class="svc-card reveal" id="svc-repair">
+                        <div class="svc-accent"></div>
+                        <div class="svc-num">02</div>
+                        <h3>Asphalt Repair &amp; Patching</h3>
+                        <p>Saw-cut patching, cold-mix and hot-mix pothole repair, skin patching and infrared asphalt
+                            restoration. Extends pavement life and prevents further deterioration.</p>
+                        <ul class="svc-list">
+                            <li>Pothole filling</li>
+                            <li>Infrared patching</li>
+                            <li>Edge repair</li>
+                            <li>Structural patching</li>
+                        </ul>
+                        <a href="javascript:void(0)" class="text-link svc-quote-link"
+                            onclick="showTab('contact', {service:'Asphalt Repair'})">Request a Quote →</a>
+                    </div>
+
+                    <div class="svc-card reveal" id="svc-sealcoating">
+                        <div class="svc-accent"></div>
+                        <div class="svc-num">03</div>
+                        <h3>Sealcoating</h3>
+                        <p>Coal-tar emulsion and asphalt-based sealcoating applied by commercial spray or squeegee.
+                            Protects against UV degradation, fuel spill oxidation and water penetration.</p>
+                        <ul class="svc-list">
+                            <li>Residential driveways</li>
+                            <li>Commercial parking lots</li>
+                            <li>Material: coal-tar emulsion</li>
+                            <li>2-coat application</li>
+                        </ul>
+                        <a href="javascript:void(0)" class="text-link svc-quote-link"
+                            onclick="showTab('contact', {service:'Sealcoating'})">Request a Quote →</a>
+                    </div>
+
+                    <div class="svc-card reveal" id="svc-crackfilling">
+                        <div class="svc-accent"></div>
+                        <div class="svc-num">04</div>
+                        <h3>Crack Filling &amp; Sealing</h3>
+                        <p>Hot-pour rubberized crack filler applied to all structural and surface cracks. Prevents water
+                            infiltration that leads to frost heave – critical in Ontario's freeze-thaw climate.</p>
+                        <ul class="svc-list">
+                            <li>Hot-pour rubber sealant</li>
+                            <li>Alligator cracking repair</li>
+                            <li>Longitudinal &amp; transverse cracks</li>
+                            <li>Joint sealing</li>
+                        </ul>
+                        <a href="javascript:void(0)" class="text-link svc-quote-link"
+                            onclick="showTab('contact', {service:'Crack Filling'})">Request a Quote →</a>
+                    </div>
+
+                    <div class="svc-card reveal" id="svc-driveway">
+                        <div class="svc-accent"></div>
+                        <div class="svc-num">05</div>
+                        <h3>Driveway Paving</h3>
+                        <p>Residential driveway installations from base preparation to final compaction. Proper grading
+                            and drainage design included. Curb cuts and apron work coordinated.</p>
+                        <ul class="svc-list">
+                            <li>New driveway construction</li>
+                            <li>Driveway resurfacing</li>
+                            <li>Grading &amp; drainage</li>
+                            <li>Curb apron coordination</li>
+                        </ul>
+                        <a href="javascript:void(0)" class="text-link svc-quote-link"
+                            onclick="showTab('contact', {service:'Driveway Paving'})">Request a Quote →</a>
+                    </div>
+
+                    <div class="svc-card reveal" id="svc-parkinglot">
+                        <div class="svc-accent"></div>
+                        <div class="svc-num">06</div>
+                        <h3>Parking Lot Paving</h3>
+                        <p>Commercial and industrial parking lot installations and resurfacing. Storm management,
+                            drainage engineering, base compaction and layout planning included.</p>
+                        <ul class="svc-list">
+                            <li>Full‑depth construction</li>
+                            <li>Milling &amp; overlay</li>
+                            <li>Drainage engineering</li>
+                            <li>Island &amp; curb construction</li>
+                        </ul>
+                        <a href="javascript:void(0)" class="text-link svc-quote-link"
+                            onclick="showTab('contact', {service:'Parking Lot Paving'})">Request a Quote →</a>
+                    </div>
+
+                    <div class="svc-card reveal" id="svc-striping">
+                        <div class="svc-accent"></div>
+                        <div class="svc-num">07</div>
+                        <h3>Line Striping &amp; Markings</h3>
+                        <p>Traffic markings, parking stall lines, accessible parking, directional arrows and road
+                            markings applied using durable traffic paint compliant with MTO standards.</p>
+                        <ul class="svc-list">
+                            <li>Parking stall lines</li>
+                            <li>Accessible (AODA) markings</li>
+                            <li>Directional arrows</li>
+                            <li>Road centre &amp; edge lines</li>
+                        </ul>
+                        <a href="javascript:void(0)" class="text-link svc-quote-link"
+                            onclick="showTab('contact', {service:'Line Striping'})">Request a Quote →</a>
+                    </div>
+
+                    <div class="svc-card reveal" id="svc-curb">
+                        <div class="svc-accent"></div>
+                        <div class="svc-num">08</div>
+                        <h3>Curb &amp; Concrete Work</h3>
+                        <p>Concrete curb installations, curbs and gutters, concrete aprons, sidewalk sections and catch
+                            basins. Required for complete lot perimeter and drainage systems.</p>
+                        <ul class="svc-list">
+                            <li>Rollover &amp; barrier curb</li>
+                            <li>Curb &amp; gutter systems</li>
+                            <li>Concrete sidewalk sections</li>
+                            <li>Catch basin installation</li>
+                        </ul>
+                        <a href="javascript:void(0)" class="text-link svc-quote-link"
+                            onclick="showTab('contact', {service:'Curb Work'})">Request a Quote →</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-band">
+            <div class="container cta-band-inner">
+                <div>
+                    <h3>Need an estimate?</h3>
+                    <p>We provide detailed written quotes within 48 hours of site visit.</p>
+                </div>
+                <a href="javascript:void(0)" class="btn btn-yellow" onclick="showTab('contact')">Get Your Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ PROJECTS -->
+    <section id="tab-projects" class="tab-section">
+        <div class="page-banner">
+            <div class="container">
+                <h1>Projects &amp; Portfolio</h1>
+                <p>A selection of completed work across residential, commercial and municipal sectors.</p>
+            </div>
+        </div>
+        <div class="section-padding">
+            <div class="container">
+                <div class="gallery-filters">
+                    <button class="filter-btn active" data-filter="all">All Work</button>
+                    <button class="filter-btn" data-filter="residential">Residential</button>
+                    <button class="filter-btn" data-filter="commercial">Commercial</button>
+                    <button class="filter-btn" data-filter="municipal">Municipal</button>
+                </div>
+                <div class="gallery-grid" id="gallery-grid">
+
+                    <div class="gallery-item" data-category="residential"
+                        data-title="Residential Driveway – Scarborough, ON" data-img="images/project_residential.png">
+                        <img src="images/project_residential.png" alt="Residential driveway paving Scarborough Ontario"
+                            loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-label">Residential</span>
+                            <p>Driveway – Scarborough, ON</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="commercial"
+                        data-title="Commercial Parking Lot – Mississauga, ON" data-img="images/project_commercial.png">
+                        <img src="images/project_commercial.png" alt="Commercial parking lot paving Mississauga Ontario"
+                            loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-label">Commercial</span>
+                            <p>Parking Lot – Mississauga, ON</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="municipal" data-title="Municipal Road – City of Toronto"
+                        data-img="images/project_municipal.png">
+                        <img src="images/project_municipal.png" alt="Municipal road paving Toronto Ontario"
+                            loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-label">Municipal</span>
+                            <p>Road Repave – Toronto, ON</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="residential"
+                        data-title="Sealcoating Project – North York, ON" data-img="images/project_sealcoating.png">
+                        <img src="images/project_sealcoating.png" alt="Sealcoating North York Ontario" loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-label">Residential</span>
+                            <p>Sealcoating – North York, ON</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="commercial" data-title="Industrial Yard – Brampton, ON"
+                        data-img="images/project_commercial.png">
+                        <img src="images/project_commercial.png" alt="Industrial yard paving Brampton Ontario"
+                            loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-label">Commercial</span>
+                            <p>Industrial Yard – Brampton, ON</p>
+                        </div>
+                    </div>
+
+                    <div class="gallery-item" data-category="municipal" data-title="Pathway Repave – Etobicoke, ON"
+                        data-img="images/project_municipal.png">
+                        <img src="images/project_municipal.png" alt="Municipal pathway paving Etobicoke Ontario"
+                            loading="lazy">
+                        <div class="gallery-overlay">
+                            <span class="gallery-label">Municipal</span>
+                            <p>Pathway – Etobicoke, ON</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ ABOUT -->
+    <section id="tab-about" class="tab-section">
+        <div class="page-banner">
+            <div class="container">
+                <h1>About Valencia's Elite Paving</h1>
+                <p>5 years of field experience in the GTA asphalt and paving industry.</p>
+            </div>
+        </div>
+        <div class="section-padding">
+            <div class="container">
+                <div class="about-layout">
+                    <div class="about-image reveal">
+                        <img src="images/about_crew.png" alt="Valencia's Elite Paving crew and heavy machinery"
+                            style="width:100%;display:block;">
+                    </div>
+                    <div class="about-text">
+                        <div class="section-label">Our Story</div>
+                        <h2 class="section-title">Built from the Ground Up</h2>
+                        <p>Valencia's Elite Paving was founded in 2021 by experienced tradespeople with a passion for
+                            quality paving work across the Greater Toronto Area. From day one, we have insisted that
+                            every
+                            job — whether a 200 sq/ft driveway or a large commercial parking lot — is executed
+                            with the same standard of material quality, installation accuracy, and jobsite
+                            professionalism.</p>
+                        <p>Today we manage active projects across Ontario and continue growing thanks to our commitment
+                            to quality and customer satisfaction. We remain a family-run operation, and every contract
+                            is personally overseen by senior leadership.</p>
+                        <div class="about-stats-row">
+                            <div class="a-stat"><strong>2021</strong><span>Founded</span></div>
+                            <div class="a-stat"><strong>5+</strong><span>Years Experience</span></div>
+                            <div class="a-stat"><strong>GTA</strong><span>Coverage</span></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ RESIDENTIAL -->
+    <section id="tab-residential" class="tab-section">
+        <div class="page-banner">
+            <div class="container">
+                <h1>Residential Paving</h1>
+                <p>Quality asphalt paving for homeowners across Ontario — driveways, pathways and more.</p>
+            </div>
+        </div>
+        <div class="section-padding">
+            <div class="container">
+                <div class="two-col-layout">
+                    <div class="two-col-image reveal">
+                        <img src="images/project_residential.png" alt="Residential driveway paving Ontario"
+                            style="width:100%;display:block;">
+                    </div>
+                    <div class="two-col-text">
+                        <div class="section-label">For Homeowners</div>
+                        <h2 class="section-title">Your Driveway, Done Right</h2>
+                        <p>We bring the same material standards and equipment used on municipal contracts to every
+                            residential job we take. That means proper base work, correct compaction, and a finished
+                            surface that performs through Ontario winters.</p>
+                        <h4 style="margin-top:1.5rem;">Residential Services Include:</h4>
+                        <ul class="check-list">
+                            <li>New asphalt driveway installation</li>
+                            <li>Driveway resurfacing / overlay</li>
+                            <li>Crack filling &amp; sealcoating</li>
+                            <li>Interlock removal and replacement</li>
+                            <li>Walkway &amp; pathway paving</li>
+                            <li>Curb apron coordination with the municipality</li>
+                        </ul>
+                        <a href="javascript:void(0)" class="btn btn-yellow" onclick="showTab('contact')"
+                            style="margin-top:2rem;display:inline-block;">Request a Free Estimate</a>
+                    </div>
+                </div>
+
+                <div class="info-boxes reveal">
+                    <div class="info-box">
+                        <h4>Frost-Ready Bases</h4>
+                        <p>We engineer base depth for Ontario's extreme freeze-thaw cycles — preventing heave and
+                            premature failure.</p>
+                    </div>
+                    <div class="info-box">
+                        <h4>Correct Drainage</h4>
+                        <p>Every driveway is graded to carry water away cleanly. No pools, no edge erosion.</p>
+                    </div>
+                    <div class="info-box">
+                        <h4>Written Warranty</h4>
+                        <p>All residential paving work comes with a written workmanship warranty.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ COMMERCIAL -->
+    <section id="tab-commercial" class="tab-section">
+        <div class="page-banner">
+            <div class="container">
+                <h1>Commercial &amp; Municipal</h1>
+                <p>Large-scale asphalt contracts for corporate, industrial, retail and government clients.</p>
+            </div>
+        </div>
+        <div class="section-padding">
+            <div class="container">
+                <div class="two-col-layout reverse">
+                    <div class="two-col-image reveal">
+                        <img src="images/project_commercial.png" alt="Commercial parking lot paving Ontario"
+                            style="width:100%;display:block;">
+                    </div>
+                    <div class="two-col-text">
+                        <div class="section-label">For Business &amp; Government</div>
+                        <h2 class="section-title">Contracts That Close on Time</h2>
+                        <p>Commercial and municipal clients operate on tight timelines with zero tolerance for delays.
+                            Our project management protocols, pre-qualified status with the City of Toronto, and fully
+                            equipped fleet mean we meet schedules and stay on budget.</p>
+                        <h4 style="margin-top:1.5rem;">We Work With:</h4>
+                        <ul class="check-list">
+                            <li>Property management companies</li>
+                            <li>Retail plazas &amp; shopping centres</li>
+                            <li>Industrial parks &amp; logistics yards</li>
+                            <li>Municipal road departments</li>
+                            <li>School boards &amp; institutions</li>
+                            <li>Condo corporations &amp; HOAs</li>
+                        </ul>
+                        <a href="javascript:void(0)" class="btn btn-yellow" onclick="showTab('contact')"
+                            style="margin-top:2rem;display:inline-block;">Contact Our Commercial Team</a>
+                    </div>
+                </div>
+
+                <div class="info-boxes reveal">
+                    <div class="info-box">
+                        <h4>Professional &amp; Reliable</h4>
+                        <p>Committed to delivering quality work on time and on budget across the GTA.</p>
+                    </div>
+                    <div class="info-box">
+                        <h4>Night &amp; Weekend Shifts</h4>
+                        <p>Minimal business disruption. We schedule paving during low-traffic hours on request.</p>
+                    </div>
+                    <div class="info-box">
+                        <h4>Traffic Management</h4>
+                        <p>Full TCP (Traffic Control Plan) capability. We handle all signage, flagging and permits.</p>
+                    </div>
+                </div>
+
+                <div class="cta-band" style="margin-top:3rem;">
+                    <div class="container cta-band-inner">
+                        <div>
+                            <h3>Tender-ready contractor</h3>
+                            <p>We respond to tenders and RFQs within 48 hours with a complete bid package.</p>
+                        </div>
+                        <a href="javascript:void(0)" class="btn btn-yellow" onclick="showTab('contact')">Submit an
+                            RFQ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ COVERAGE -->
+    <section id="tab-coverage" class="tab-section">
+        <div class="page-banner">
+            <div class="container">
+                <h1>Service Coverage Area</h1>
+                <p>We operate throughout Ontario, with primary focus on the Greater Toronto Area.</p>
+            </div>
+        </div>
+        <div class="section-padding">
+            <div class="container">
+                <div class="coverage-layout">
+                    <div class="coverage-map-wrap reveal">
+                        <div class="map-container">
+                            <div class="map-label-top">ONTARIO — GTA SERVICE ZONE</div>
+                            <div class="gmap-wrap">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d461764.7032069498!2d-79.38318565!3d43.71813485!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1709000000000!5m2!1sen!2sca"
+                                    width="100%" height="420" style="border:0; display:block;" allowfullscreen=""
+                                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                                    title="Valencia's Elite Paving — GTA Service Coverage Area">
+                                </iframe>
+                            </div>
+                            <div class="map-legend">
+                                <div class="legend-item"><span class="legend-dot yellow"></span>Primary: Toronto &amp;
+                                    GTA</div>
+                                <div class="legend-item"><span class="legend-dot grey"></span>Extended: Ontario‑wide
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coverage-text">
+                        <div class="section-label">Our Reach</div>
+                        <h2 class="section-title">GTA &amp; Surrounding Regions</h2>
+                        <p>Based in Toronto, we mobilise our full fleet across the Greater Toronto Area and surrounding
+                            municipalities throughout Ontario. For larger municipal contracts, we can mobilise
+                            province-wide.</p>
+                        <div class="city-badges">
+                            <span>Toronto</span><span>Mississauga</span><span>Brampton</span><span>Vaughan</span>
+                            <span>Markham</span><span>Richmond Hill</span><span>Pickering</span><span>Ajax</span>
+                            <span>Whitby</span><span>Oshawa</span><span>Burlington</span><span>Oakville</span>
+                            <span>Milton</span><span>Barrie</span><span>Hamilton</span><span>Guelph</span>
+                        </div>
+                        <p class="coverage-note">Not seeing your city? Contact us — we may be able to accommodate your
+                            project.</p>
+                        <a href="javascript:void(0)" class="btn btn-yellow" onclick="showTab('contact')"
+                            style="margin-top:1rem;display:inline-block;">Check Your Area</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ FAQ -->
+    <section id="tab-faq" class="tab-section">
+        <div class="page-banner">
+            <div class="container">
+                <h1>Frequently Asked Questions</h1>
+                <p>Common questions from our residential, commercial and municipal clients.</p>
+            </div>
+        </div>
+        <div class="section-padding">
+            <div class="container faq-container">
+
+                <div class="faq-item">
+                    <button class="faq-question">How long does a new asphalt driveway last in Ontario?<span
+                            class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>A properly installed asphalt driveway in Ontario typically lasts 20–30 years with regular
+                            maintenance including sealcoating every 3–5 years and prompt crack repair. Freeze-thaw
+                            cycles are the primary stressor — a correct base depth and drainage system are essential.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">What is the best time of year to pave in Ontario?<span
+                            class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>The optimal paving season is late spring through early fall (May–October), when temperatures
+                            stay consistently above 10°C. Cold temperatures affect hot-mix asphalt compaction and
+                            adhesion. Emergency cold-patch repairs can be performed year-round.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">How much does asphalt paving cost per square foot in Ontario?<span
+                            class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Residential driveway paving in Ontario typically ranges from $3.50–$7.00/sq ft for
+                            resurfacing and $6.00–$12.00/sq ft for full-depth new installation depending on gravel base
+                            requirements, accessibility, site conditions and current asphalt pricing. Commercial and
+                            municipal rates vary by scope. We provide detailed written estimates at no obligation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Do you provide written quotes and contracts?<span
+                            class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Yes. All work is covered by a detailed written quotation specifying scope, materials,
+                            thickness, timeline and pricing. We do not proceed with any work without a signed contract.
+                            Commercial and municipal work also includes applicable bonds and insurance certificates.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">How long after paving can I drive or park on the surface?<span
+                            class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>New hot-mix asphalt is typically safe for light vehicle traffic within 24–48 hours under warm
+                            conditions. Full cure takes 6–12 months. We advise against sharp turns, heavy trucks, jacks,
+                            and kickstands during the first full summer season. Sealcoating should wait a minimum of 12
+                            months after new paving.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Are you licensed and insured to work in Toronto and the GTA?<span
+                            class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Yes. Valencia's Elite Paving is fully licensed and insured to operate across
+                            the Greater Toronto Area and Ontario.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">What is sealcoating and do I need it?<span
+                            class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Sealcoating is a protective emulsion coating applied to asphalt surfaces every 3–5 years. It
+                            seals micro-oxidation cracks, protects against fuel and oil spill damage, UV degradation,
+                            and water infiltration — the leading cause of pothole formation in Ontario's frost-prone
+                            climate. It is the most cost-effective way to extend pavement life.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Can you work during the night or on weekends to limit disruption?<span
+                            class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p> Yes. For commercial and municipal clients we offer night-shift and weekend scheduling to
+                            minimise impact on operations. Additional coordination charges may apply. This must be
+                            specified in the project scope before contract execution.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ CONTACT -->
+    <section id="tab-contact" class="tab-section">
+        <div class="page-banner">
+            <div class="container">
+                <h1>Request a Quote</h1>
+                <p>Complete the form below and our team will follow up within one business day.</p>
+            </div>
+        </div>
+        <div class="section-padding">
+            <div class="container">
+                <div class="contact-layout">
+
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <div class="section-label">Get In Touch</div>
+                        <h2 class="section-title">Dispatch &amp; Estimating</h2>
+                        <div class="contact-detail">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <strong>Office</strong><br>
+                                100 Industrial Pkwy N,<br>Toronto, ON M4B 1B3
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <strong>Phone</strong><br>
+                                <a href="tel:6475262569">(647) 526-2569</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-icon">✉</div>
+                            <div>
+                                <strong>Email</strong><br>
+                                <a href="mailto:info@valenciaelitepaving.ca">info@valenciaelitepaving.ca</a>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="contact-icon">🕐</div>
+                            <div>
+                                <strong>Office Hours</strong><br>
+                                Mon–Fri: 7:00 AM – 5:00 PM<br>
+                                Sat: 8:00 AM – 12:00 PM
+                            </div>
+                        </div>
+                        <div class="contact-note">
+                            <strong>Emergency &amp; After-Hours</strong><br>
+                            For emergency pothole or road hazard repair, call our dispatch line at (647) 526-2569.
+                        </div>
+                    </div>
+
+                    <!-- Quote Form -->
+                    <div class="contact-form-wrap">
+                        <form id="contact-form" novalidate>
+                            <!-- Honeypot -->
+                            <input type="text" name="website" id="honeypot" tabindex="-1" autocomplete="off"
+                                aria-hidden="true">
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Full Name <span class="req">*</span></label>
+                                    <input type="text" id="name" name="name" placeholder="John Smith"
+                                        autocomplete="name">
+                                    <span class="field-error" id="err-name"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address <span class="req">*</span></label>
+                                    <input type="email" id="email" name="email" placeholder="john@example.com"
+                                        autocomplete="email">
+                                    <span class="field-error" id="err-email"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number <span class="req">*</span></label>
+                                    <input type="tel" id="phone" name="phone" placeholder="(416) 555-0100"
+                                        autocomplete="tel">
+                                    <span class="field-error" id="err-phone"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="service">Type of Service <span class="req">*</span></label>
+                                    <select id="service" name="service">
+                                        <option value="">— Select a service —</option>
+                                        <option>Asphalt Paving</option>
+                                        <option>Asphalt Repair</option>
+                                        <option>Sealcoating</option>
+                                        <option>Driveway Paving</option>
+                                        <option>Parking Lot Paving</option>
+                                        <option>Line Striping</option>
+                                        <option>Crack Filling</option>
+                                        <option>Curb Work</option>
+                                        <option>Municipal Road</option>
+                                        <option>Other</option>
+                                    </select>
+                                    <span class="field-error" id="err-service"></span>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="address">Project Address <span class="req">*</span></label>
+                                <input type="text" id="address" name="address"
+                                    placeholder="123 Main St, Toronto, ON M4B 1A1" autocomplete="off">
+                                <span class="field-error" id="err-address"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dimensions">Estimated Dimensions / Area</label>
+                                <input type="text" id="dimensions" name="dimensions"
+                                    placeholder="e.g.: 20 ft × 60 ft driveway, roughly 1,200 sq ft">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Additional Information</label>
+                                <textarea id="message" name="message" rows="4"
+                                    placeholder="Describe the current condition of the surface, access constraints, preferred timeline, or any other details that will help us prepare an accurate estimate."></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="photos">Site Photos (Optional)</label>
+                                <div class="file-drop" id="file-drop">
+                                    <input type="file" id="photos" name="photos" accept="image/*" multiple>
+                                    <span>📷 Click to attach photos or drag &amp; drop</span>
+                                    <small>JPG, PNG, HEIF, WebP — Max 10 files, 100 MB each</small>
+                                </div>
+                                <span id="file-names" class="file-names"></span>
+                            </div>
+
+                            <div class="form-submit-row">
+                                <button type="submit" class="btn btn-yellow btn-submit" id="submit-btn">
+                                    <span id="submit-text">Send Quote Request</span>
+                                    <span id="submit-spinner" class="spinner hidden"></span>
+                                </button>
+                            </div>
+
+                            <div id="form-success" class="form-success hidden">
+                                ✔ Your quote request has been submitted. We'll contact you within one business day.
+                            </div>
+                            <div id="form-error" class="form-error-msg hidden"></div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════ LIGHTBOX -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close">✕</button>
+        <img id="lightbox-img" src="" alt="">
+        <p id="lightbox-caption"></p>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════ FOOTER -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div>
+                <a href="javascript:void(0)" class="logo footer-logo" onclick="showTab('home')"
+                    style="padding-left:0;border:none;">
+                    <img src="images/logo.png" alt="Valencia's Elite Paving" class="footer-logo-img">
+                    <span class="logo-text" style="border-left:4px solid #FFC000;padding-left:12px;">VALENCIA'S<br>ELITE
+                        PAVING</span>
+                </a>
+                <p style="margin-top:1rem;max-width:280px;">Heavy civil construction and asphalt solutions for Ontario's
+                    residential, commercial and municipal sectors since 2021.</p>
+            </div>
+            <div>
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="javascript:void(0)" onclick="showTab('services')">Services</a></li>
+                    <li><a href="javascript:void(0)" onclick="showTab('projects')">Projects</a></li>
+                    <li><a href="javascript:void(0)" onclick="showTab('about')">About Us</a></li>
+                    <li><a href="javascript:void(0)" onclick="showTab('coverage')">Coverage Area</a></li>
+                    <li><a href="javascript:void(0)" onclick="showTab('faq')">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-heading">Services</h4>
+                <ul class="footer-links">
+                    <li><a href="javascript:void(0)" onclick="showTab('services', {scrollTo:'#svc-paving'})">Asphalt
+                            Paving</a></li>
+                    <li><a href="javascript:void(0)"
+                            onclick="showTab('services', {scrollTo:'#svc-sealcoating'})">Sealcoating</a></li>
+                    <li><a href="javascript:void(0)" onclick="showTab('services', {scrollTo:'#svc-crackfilling'})">Crack
+                            Filling</a></li>
+                    <li><a href="javascript:void(0)" onclick="showTab('services', {scrollTo:'#svc-striping'})">Line
+                            Striping</a></li>
+                    <li><a href="javascript:void(0)" onclick="showTab('services', {scrollTo:'#svc-parkinglot'})">Parking
+                            Lots</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-heading">Contact</h4>
+                <address class="footer-address">
+                    100 Industrial Pkwy N,<br>Toronto, ON M4B 1B3<br><br>
+                    <a href="tel:6475262569">(647) 526-2569</a><br>
+                    <a href="mailto:info@valenciaelitepaving.ca">info@valenciaelitepaving.ca</a>
+                </address>
+                <a href="javascript:void(0)" class="btn btn-yellow" onclick="showTab('contact')"
+                    style="display:inline-block;margin-top:1.2rem;">Get a Free Quote</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy; 2026 Valencia's Elite Paving. All rights reserved. | Licensed &amp; Insured in Ontario</p>
+                <p>Quality Paving | GTA &amp; Ontario Coverage</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
