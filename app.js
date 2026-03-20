@@ -320,60 +320,33 @@ if (contactForm) {
         submitText.textContent = 'Sending...';
         spinner.classList.remove('hidden');
 
-        // Build FormData (includes files)
-        const formData = new FormData();
-        formData.append('website', honeypot ? honeypot.value : '');
-        formData.append('name', document.getElementById('name').value.trim());
-        formData.append('email', document.getElementById('email').value.trim());
-        formData.append('phone', document.getElementById('phone').value.trim());
-        formData.append('address', document.getElementById('address').value.trim());
-        formData.append('service', document.getElementById('service').value);
-        formData.append('dimensions', document.getElementById('dimensions').value.trim());
-        formData.append('message', document.getElementById('message').value.trim());
-
-        // Append photos
-        const photosEl = document.getElementById('photos');
-        if (photosEl && photosEl.files.length > 0) {
-            for (let i = 0; i < photosEl.files.length; i++) {
-                formData.append('photos', photosEl.files[i]);
-            }
-        }
+        // Build JSON payload
+        const payload = {
+            website: honeypot ? honeypot.value : '',
+            name: document.getElementById('name').value.trim(),
+            email: document.getElementById('email').value.trim(),
+            phone: document.getElementById('phone').value.trim(),
+            address: document.getElementById('address').value.trim(),
+            service: document.getElementById('service').value,
+            dimensions: document.getElementById('dimensions').value.trim(),
+            message: document.getElementById('message').value.trim(),
+        };
 
         try {
-            // Use XMLHttpRequest for upload progress tracking
-            const xhr = new XMLHttpRequest();
-            const result = await new Promise((resolve, reject) => {
-                xhr.upload.addEventListener('progress', (e) => {
-                    if (e.lengthComputable) {
-                        const pct = Math.round((e.loaded / e.total) * 100);
-                        submitText.textContent = pct < 100
-                            ? `Uploading ${pct}%...`
-                            : 'Sending...';
-                    }
-                });
-
-                xhr.addEventListener('load', () => {
-                    try {
-                        const data = JSON.parse(xhr.responseText);
-                        resolve({ ok: xhr.status >= 200 && xhr.status < 300, data });
-                    } catch {
-                        resolve({ ok: false, data: { error: 'Invalid server response.' } });
-                    }
-                });
-
-                xhr.addEventListener('error', () => reject(new Error('Network error')));
-                xhr.addEventListener('abort', () => reject(new Error('Upload cancelled')));
-
-                xhr.open('POST', '/api/contact');
-                xhr.send(formData);
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
             });
 
-            if (result.ok && result.data.success) {
+            const data = await response.json();
+
+            if (response.ok && data.success) {
                 successMsg.classList.remove('hidden');
                 contactForm.reset();
                 if (fileNames) fileNames.textContent = '';
             } else {
-                errorMsg.textContent = result.data.error || 'Something went wrong. Please try again.';
+                errorMsg.textContent = data.error || 'Something went wrong. Please try again.';
                 errorMsg.classList.remove('hidden');
             }
         } catch (err) {
