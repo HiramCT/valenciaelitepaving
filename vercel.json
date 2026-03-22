@@ -21,5 +21,15 @@
             "src": "images/**",
             "use": "@vercel/static"
         }
+    ],
+    "routes": [
+        {
+            "src": "/api/contact",
+            "dest": "/api/contact.js"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/$1"
+        }
     ]
 }
