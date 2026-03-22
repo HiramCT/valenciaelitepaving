@@ -339,18 +339,28 @@ if (contactForm) {
                 body: JSON.stringify(payload),
             });
 
-            const data = await response.json();
+            // Check content type before parsing json!
+            const contentType = response.headers.get('content-type');
+            if (contentType && contentType.includes('application/json')) {
+                const data = await response.json();
 
-            if (response.ok && data.success) {
-                successMsg.classList.remove('hidden');
-                contactForm.reset();
-                if (fileNames) fileNames.textContent = '';
+                if (response.ok && data.success) {
+                    successMsg.classList.remove('hidden');
+                    contactForm.reset();
+                    if (fileNames) fileNames.textContent = '';
+                } else {
+                    errorMsg.textContent = data.error || 'Something went wrong. Please try again.';
+                    errorMsg.classList.remove('hidden');
+                }
             } else {
-                errorMsg.textContent = data.error || 'Something went wrong. Please try again.';
-                errorMsg.classList.remove('hidden');
+                // Not JSON (e.g. Vercel HTML error page)
+                const text = await response.text();
+                throw new Error(`Error del servidor HTTP ${response.status}: Vercel dice que hubo un problema interno.`);
             }
+
         } catch (err) {
-            errorMsg.textContent = 'Network error. Please check your connection and try again, or call us directly.';
+            console.error('Excepción en fetch:', err);
+            errorMsg.textContent = err.message || 'Error de conexión. Intenta de nuevo o llámanos.';
             errorMsg.classList.remove('hidden');
         } finally {
             submitBtn.disabled = false;
