@@ -1,8 +1,5 @@
 const { Resend } = require('resend');
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-const TO_EMAIL = process.env.TO_EMAIL || 'info@valenciaelitepaving.ca';
-
 // ── Helpers ─────────────────────────────────────────────────────────────────
 const ALLOWED_SERVICES = [
     'Asphalt Paving', 'Asphalt Repair', 'Sealcoating', 'Driveway Paving',
@@ -55,6 +52,15 @@ module.exports = async (req, res) => {
     }
 
     try {
+        const apiKey = process.env.RESEND_API_KEY;
+        const toEmail = process.env.TO_EMAIL || 'info@valenciaelitepaving.ca';
+
+        if (!apiKey) {
+            console.error('CRITICAL: RESEND_API_KEY is missing from environment variables');
+            return res.status(500).json({ error: 'Configuración del servidor incompleta. Por favor, asegúrate de que agregaste RESEND_API_KEY en el dashboard de Vercel y volviste a desplegar (Redeploy).' });
+        }
+
+        const resend = new Resend(apiKey);
         const body = req.body || {};
 
         // Honeypot
@@ -98,7 +104,7 @@ module.exports = async (req, res) => {
 
         const emailPayload = {
             from: 'Valencia Elite Paving Form <onboarding@resend.dev>',
-            to: TO_EMAIL,
+            to: toEmail,
             replyTo: email,
             subject: `New Quote Request: ${service} — ${name}`,
             html: htmlBody,
@@ -108,13 +114,14 @@ module.exports = async (req, res) => {
 
         if (error) {
             console.error('Resend error:', error);
-            return res.status(500).json({ error: 'Failed to send message. Please call us directly.' });
+            // Si hay un error de Resend, como dominio no verificado
+            return res.status(500).json({ error: 'Error de envío de correo: ' + error.message });
         }
 
         console.log(`✔ Quote sent: ${service} from ${name}`);
         return res.json({ success: true });
     } catch (err) {
         console.error('Server error:', err);
-        return res.status(500).json({ error: 'Server error. Please try again later.' });
+        return res.status(500).json({ error: 'Error interno del servidor: ' + err.message });
     }
 };
