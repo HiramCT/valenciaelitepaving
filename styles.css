@@ -343,10 +343,9 @@ h5 {
 .hero-bg {
     position: absolute;
     inset: 0;
-    background-image: url('images/hero_paving.png');
+    background-image: url('images/hero_new.jpg');
     background-size: cover;
-    background-position: center 30%;
-    animation: heroPan 40s ease-in-out infinite alternate;
+    background-position: center center;
 }
 
 @keyframes heroPan {
